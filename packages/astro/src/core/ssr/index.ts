@@ -160,6 +160,12 @@ export async function ssr({ astroConfig, filePath, logging, mode, origin, pathna
 
     let html = await renderPage(result, Component, pageProps, null);
 
+    // inject <!doctype html> if missing (TODO: is a more robust check needed for comments, etc.?)
+
+    if (!/<!doctype html/i.test(html)) {
+      html = '<!doctype html>\n' + html;
+    }
+
     // inject tags
     const tags: vite.HtmlTagDescriptor[] = [];
 

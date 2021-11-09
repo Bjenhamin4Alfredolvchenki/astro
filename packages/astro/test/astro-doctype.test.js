@@ -1,5 +1,3 @@
-/**
- * UNCOMMENT: compiler doesn’t insert <!doctype>
 import { expect } from 'chai';
 import cheerio from 'cheerio';
 import { loadFixture } from './test-utils.js';
@@ -72,6 +70,3 @@ describe('Doctype', () => {
     expect($('head link')).to.have.lengthOf(1);
   });
 });
-*/
-
-it.skip('is skipped', () => {});
