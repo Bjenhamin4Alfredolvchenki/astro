@@ -111,6 +111,7 @@ export default function astro({ config, devServer }: AstroPluginOptions): vite.P
         // WASM panic
         if (message && message === 'RuntimeError: unreachable') {
           err.message = 'Syntax error';
+          if (err.stack && typeof err.stack === 'object' && err.stack.message) err.stack.message = message;
           err.sourceLoc = { file: id, line: 0, column: 0 }; // TODO: can WASM show us the last character it erred on?
           throw new Error(`${id}: ${err.message}`);
         }
