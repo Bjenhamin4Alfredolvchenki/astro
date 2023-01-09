@@ -6,7 +6,7 @@ layout: ../../layouts/MainLayout.astro
 
 **Welcome to Astro!**
 
-This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
+This is the `docs` starter template MILANO. It contains all of the features that you need to build a Markdown-powered documentation site, including:
 
 - ✅ **Full Markdown support**
 - ✅ **Responsive mobile-friendly design**
